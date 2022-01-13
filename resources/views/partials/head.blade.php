@@ -14,3 +14,10 @@
 <link rel="stylesheet" href="{{ asset('frontend/css/aos.css') }}">
 
 <link rel="stylesheet" href="{{ asset('frontend/css/style.css') }}">
+
+<!-- Fonts -->
+<link rel="dns-prefetch" href="//fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+<!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
