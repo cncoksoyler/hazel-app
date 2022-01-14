@@ -19,6 +19,7 @@ class CreateSubscribersTable extends Migration
             $table->string('surname');
             $table->string('email')->unique();
             $table->date('date_of_birth')->nullable();
+            $table->text('content')->nullable();
             $table->timestamps();
         });
     }
