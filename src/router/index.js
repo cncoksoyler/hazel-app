@@ -55,3 +55,15 @@ const router = createRouter({
 })
 
 export default router
+
+
+/*
+Content
+
+Layout
+https://colorhunt.co/palette/ccd6a6dae2b6dfe8ccf7eddb
+
+
+TODO 
+
+*/
