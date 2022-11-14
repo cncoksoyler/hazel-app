@@ -1,20 +1,12 @@
 
 <template>
 
-  <nav>
-    <router-link to="/">Ana sayfa</router-link> |
-    <router-link to="/theta">ThetaHealing®</router-link> |
-    <router-link to="/numeroloji">Numeroloji</router-link> |
-    <router-link to="/hizmetler">Hizmetler</router-link> |
-    <router-link to="/about">Hakkimda</router-link> |
-    <router-link to="/iletisim">Iletisim</router-link>
-  </nav>
   <router-view/>
 </template>
 
 <script>
 /* eslint-disable */
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'App',

@@ -1,24 +1,27 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-    <label for="price" class="block text-sm font-medium text-red-700">Price</label>
-      <div class="relative mt-1 rounded-md shadow-sm">
-        <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
-          <span class="text-gray-500 sm:text-sm">$</span>
-        </div>
-        <input type="text" name="price" id="price"
-          class="block w-full rounded-md border-gray-300 pl-7 pr-12 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          placeholder="0.00">
-        <div class="absolute inset-y-0 right-0 flex items-center">
-          <label for="currency" class="sr-only">Currency</label>
-          <select id="currency" name="currency"
-            class="h-full rounded-md border-transparent bg-transparent py-0 pl-2 pr-7 text-gray-500 focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-            <option>USD</option>
-            <option>CAD</option>
-            <option>EUR</option>
-          </select>
-        </div>
-      </div>
+  <div class="contact">
+    <navbar-component></navbar-component>
+    <main>
+      <h1>This is a content page</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sit dignissimos numquam tempora doloremque? Incidunt, magni laboriosam exercitationem vitae, non aliquid labore harum eum fuga nulla aut ex odio earum!</p>
+    </main>
+    
+    <footer-component></footer-component>
   </div>
-
 </template>
+
+<script>
+import NavbarComponent from '@/components/NavbarComponent.vue';
+import FooterComponent from '@/components/FooterComponent.vue';
+
+import '@/assets/tailwind.css'
+
+
+export default{
+  components: {
+    NavbarComponent,
+    FooterComponent
+  }
+}
+
+</script>
