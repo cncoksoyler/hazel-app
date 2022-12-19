@@ -65,5 +65,10 @@ https://colorhunt.co/palette/ccd6a6dae2b6dfe8ccf7eddb
 
 
 TODO 
+Tum sayfayi ortaya al
+ana sayfadaki resmi simdilik kaldir ve her bolume palete uygun bir renk ver
+Ana sayfa bolumlerini netle ve sayiyi ona indirge
+alakasiz komponentleri sil
+
 
 */

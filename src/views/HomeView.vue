@@ -2,34 +2,29 @@
   <div class="home">
     <navbar-component></navbar-component>
     <main>
+      
+      <carousel-component>
+        <slide-component v-for="(slide,index) in carouselSlides" :key="index">
+          <img :src="require(`../assets/slider/${slide}.jpg`)" alt="">
+        </slide-component>
+      
+      </carousel-component>
       <div
-        class="relative pt-16 pb-32 flex content-center items-center justify-center"
-        style="min-height: 75vh;"
+        class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#F7EDDB] mb-3"
+        
       >
-        <div
-          class="relative top-0 w-full h-full bg-center"
-          
-        >
-        <img src="@/assets/img/main_img.webp" alt="" srcset="">
-          <span
-            id="blackOverlay"
-            class="w-full h-full absolute opacity-75 bg-black"
-          ></span>
-        </div>
-        <div class="container relative mx-auto">
-          <div class="items-center flex flex-wrap">
-            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-              <div class="pr-12">
-                <h1 class="text-white font-semibold text-5xl">
-                  Ana baslik vs.
-                </h1>
-                <p class="mt-4 text-lg text-gold-300">
-                  Buraya ana motto gelebilir ya da burasi kaydiridilabilir olur
-                </p>
-              </div>
-            </div>
+      
+        <div class="container relative px-4 mx-auto flex items-center justify-between">
+         
+          <div class="lg:justify-start opacity-25">
+            <img src="@/assets/img/main_img.webp" alt="" srcset="">
           </div>
+          <div class="lg:justify-start opacity-25">
+            <img src="@/assets/img/main_img.webp" alt="" srcset="">
+          </div>
+        
         </div>
+   
         <div
           class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
           style="height: 70px;"
@@ -564,6 +559,8 @@
 
 import NavbarComponent from '@/components/NavbarComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+import CarouselComponent from '@/components/CarouselComponent.vue'
+import SlideComponent from '@/components/SlideComponent.vue'
 
 // import '../assets/tailwind.css';
 import '@/assets/tailwind.css'
@@ -572,11 +569,18 @@ export default {
   name: 'HomeView',
   components: {
      NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    CarouselComponent,
+    SlideComponent
   },
-  computed:{
+  setup() {
+    const carouselSlides = ["bg-1","bg-2","bg-3"];
+
+    return {carouselSlides};
+  },
    
-    }
+    
   
 }
 </script>
+
