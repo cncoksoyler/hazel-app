@@ -2,49 +2,18 @@
   <div class="home">
     <navbar-component></navbar-component>
     <main>
-      
-      <carousel-component>
-        <slide-component v-for="(slide,index) in carouselSlides" :key="index">
-          <img :src="require(`../assets/slider/${slide}.jpg`)" alt="">
+
+      <carousel-component class="relative flex flex-wrap items-center " v-slot="{currentSlide}">
+
+        <slide-component v-for="(slide,index) in carouselSlides" :key="index" class="relative flex flex-wrap">
+          <div v-show="currentSlide === index +1">
+            <img :src="require(`../assets/slider/${slide}.jpg`)" alt="">
+          </div>
+
         </slide-component>
-      
+
       </carousel-component>
-      <div
-        class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#F7EDDB] mb-3"
-        
-      >
-      
-        <div class="container relative px-4 mx-auto flex items-center justify-between">
-         
-          <div class="lg:justify-start opacity-25">
-            <img src="@/assets/img/main_img.webp" alt="" srcset="">
-          </div>
-          <div class="lg:justify-start opacity-25">
-            <img src="@/assets/img/main_img.webp" alt="" srcset="">
-          </div>
-        
-        </div>
-   
-        <div
-          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-          style="height: 70px;"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-gray-300 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
-      </div>
+
       <section class="pb-20 bg-gray-300 -mt-24">
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
@@ -568,19 +537,16 @@ import { computed } from '@vue/runtime-core'
 export default {
   name: 'HomeView',
   components: {
-     NavbarComponent,
+    NavbarComponent,
     FooterComponent,
     CarouselComponent,
     SlideComponent
   },
-  setup() {
-    const carouselSlides = ["bg-1","bg-2","bg-3"];
+  setup () {
+    const carouselSlides = ['bg-1', 'bg-2', 'bg-3']
 
-    return {carouselSlides};
-  },
-   
-    
-  
+    return { carouselSlides }
+  }
+
 }
 </script>
-

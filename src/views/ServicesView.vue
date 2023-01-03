@@ -4,7 +4,7 @@
     <main>
       <div
         class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-[#F7EDDB] mb-3"
-        
+
       >
         <div class="container relative px-4 mx-auto flex items-center justify-between">
           <div class="lg:justify-start opacity-25">
@@ -13,9 +13,9 @@
           <div class="lg:justify-start opacity-25">
             <img src="@/assets/img/main_img.webp" alt="" srcset="">
           </div>
-        
+
         </div>
-   
+
         <div
           class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
           style="height: 70px;"
@@ -557,12 +557,12 @@ import { computed } from '@vue/runtime-core'
 export default {
   name: 'HomeView',
   components: {
-     NavbarComponent,
+    NavbarComponent,
     FooterComponent
   },
-  computed:{
-   
-    }
-  
+  computed: {
+
+  }
+
 }
 </script>
